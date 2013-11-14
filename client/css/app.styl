@@ -16,12 +16,12 @@ body
   background -o-linear-gradient(45deg,  #58d758 8%,#45ccda 91%) /* Opera 11.10+ */
   background -ms-linear-gradient(45deg,  #58d758 8%,#45ccda 91%) /* IE10+ */
   background linear-gradient(45deg,  #58d758 8%,#45ccda 91%) /* W3C */
-  // filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#58d758', endColorstr='#45ccda',GradientType=1 ) /* IE6-8 fallback on horizontal gradient */
+  filter "progid:DXImageTransform.Microsoft.gradient(startColorstr='#58d758', endColorstr='#45ccda',GradientType=1)"
   text-shadow 1px 1px 3px rgba(0,0,0,0.2)
   margin-top 10px
-  background-position static
-  width 100%
-  height 100%
+  background-position center center
+  background-attachment fixed
+  background-size cover
 
 .jumbotron
   background-color transparent
