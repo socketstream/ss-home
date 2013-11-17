@@ -7,43 +7,19 @@ html(lang="en")
     title SocketStream - a realtime web framework for Single Page Apps
   body
     .wrapper
-      .container
-        .row
-          nav.navbar.navbar-default(role="navigation")
-            .navbar-header
-              a.navbar-brand
-                img(src="/images/header-logo.png", height="15")
-
-      .jumbotron
+      header
         .container
-          .row.center
-            h1 The future of the web is realtime
-            p SocketStream is a web framework for Realtime Single Page Apps.
-      .container
-        .row
-          .col-sm-4
-            h2.center Get started
-            .col-sm-12
-              pre
-                code
-                  span npm install -g socketstream
-                  br
-                  span socketstream new my_app
-                  br 
-                  span cd my_app
-                  br 
-                  span npm install
-                  br 
-                  span npm start
-          .col-sm-4.center
-            h2 Read the Docs
-            a.big(href="https://github.com/socketstream/socketstream#documentation")
-              i.fa.fa-book
-          .col-sm-4.center
-            h2 Join the Community
-            a.medium(href="https://twitter.com/socketstream")
-              i.fa.fa-twitter
-            a.medium(href="https://github.com/socketstream/socketstream")
-              i.fa.fa-github
-            a.medium(href="https://groups.google.com/forum/#!forum/socketstream")
-              i.fa.fa-comments
+          .row
+            nav.navbar.navbar-default(role="navigation")
+              .navbar-header
+                a(href="/").navbar-brand
+                  img(src="/images/header-logo.png", height="15")
+              ul.nav.navbar-nav
+                li
+                  a(href="/features") Features
+
+      content        
+      footer
+        .container
+          .row0
+            &copy; 2013 SocketStream. SocketStream is licensed under the MIT Licence.

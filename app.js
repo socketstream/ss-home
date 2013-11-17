@@ -7,7 +7,7 @@ var http = require('http'),
 ss.client.define('main', {
   view: 'app.jade',
   css:  ['app.styl'],
-  code: ['libs/jquery.min.js', 'app'],
+  code: ['libs/jquery.min.js', 'libs/davis.min.js', 'app'],
   tmpl: '*'
 });
 
