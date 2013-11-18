@@ -4,7 +4,7 @@
 
 console.log('App Loaded');
 
-window.router = Davis(function () {
+var router = Davis(function () {
 
   this.configure(function () {
     this.generateRequestOnPageLoad = true;
