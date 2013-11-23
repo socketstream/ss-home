@@ -14,6 +14,25 @@ var router = Davis(function () {
     $('content').html(ss.tmpl['site-index'].r());
   });
 
+  this.get('/getting-started', function (req) {
+    $('content').html(ss.tmpl['site-getting-started'].r());
+  });
+
+
+  this.get('/tour', function (req) {
+    $('content').html(ss.tmpl['site-tour'].r());
+  });
+
+  this.get('/news', function (req) {
+    $('content').html(ss.tmpl['site-news'].r());
+  });
+
+  this.post('/search', function (req) {
+    console.log();
+    $('content').html(ss.tmpl['site-search'].render({term:req.params.term}));
+  });
+
+
   this.get('/features', function (req) {
     $('content').html(ss.tmpl['site-features'].r());
   });
