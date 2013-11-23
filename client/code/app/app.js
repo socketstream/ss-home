@@ -1,8 +1,11 @@
 'use strict';
 // Client Code
 
+var ss    = window.ss,
+    Davis = window.Davis;
 
-var router = Davis(function () {
+
+var router = new Davis(function () {
 
     this.configure(function () {
         this.generateRequestOnPageLoad = true;
@@ -24,7 +27,7 @@ var router = Davis(function () {
         $('content').html(ss.tmpl['site-news'].r());
     });
 
-    this.post('/search', function () {
+    this.post('/search', function (req) {
         $('content').html(ss.tmpl['site-search'].render({term:req.params.term}));
     });
 

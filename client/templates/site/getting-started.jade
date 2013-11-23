@@ -1,26 +1,86 @@
 .container
 
-  .row
+  .jumbotron
 
     h1 Getting Started 
+    p Find out how to use SocketStream to create Realtime Web Apps. 
 
   .row
 
+    .col-md-3#guide
+      ul.nav.nav-pills.nav-stacked
+        h3 Guide
+        li 
+          a Install SocketStream
+        li 
+          a Creating apps
+        li
+          a How app files are organised
+
+    .col-md-7.col-md-offset-1
+
+      .row
+        h2 Install SocketStream
+
+        p SocketStream is built on top of Node.js, and is compatible with versions 0.8 and above. You can install it via npm.
+
+        pre
+          code npm install -g socketstream
+
+        p The <code>-g</code> flag is passed to install SocketStream globally. This is so that you can run the <code>socketstream</code> command to generate new apps.
+
+      .row
+        h2 Creating apps
+
+        p Creating an app in SocketStream is as simple as this:
+
+        pre
+          code socketstream new my_app
+
+        p After you run this command, you will see the following output:
+
+        pre
+          code
+            div.yellow Success! Created app 'my_app' with:
+            div  ✓ Basic chat demo <span class="gray">(-m for minimal install)</span>
+            div  ✓ Javascript example code <span class="gray">(-c if you prefer CoffeeScript)</span>
+            div  ✓ Plain HTML for views <span class="gray">(-j if you prefer Jade)</span>
+            div.yellow Next, run the following commands:
+            div    cd my_app
+            div    [sudo] npm install
+            div.yellow To start your app:
+            div    node app.js
+
+        p If you look at the output, you will notice that the application has generated the basic chat demo (as hosted at <a href='http://demo.socketstream.com'>demo.socketstream.com</a>). You will also notice that there are flags to change what files the app will generate:
+        br
+        ul
+          li <code><span class="gray">-m</span></code> Can be passed if you want an app that does not contain the chat demo app code.
+          br 
+          li <code><span class="gray">-c</span></code> Can be passed if you want an app with CoffeeScript files in place of JS files.
+          br
+          li <code><span class="gray">-j</span></code> Can be passed if you want an app with Jade templates instead of HTML templates.
+        br
+        p To pass these flags, specify them after the app name:
+        pre
+          code socketstream new my_other_app -m -c -j
+
+      .row
+        h2 How app files are organised
+        p If you take a look at the files and folders inside a new socketstream app, they look like this:
+        ul.appStructure
+          li.glyphicon.glyphicon-folder-close &nbsp;client
+          li.glyphicon.glyphicon-folder-close &nbsp;node_modules
+          li.glyphicon.glyphicon-folder-close &nbsp;server
+          li.glyphicon.glyphicon-file &nbsp;app.js
+          li.glyphicon.glyphicon-file &nbsp;package.json
+          li.glyphicon.glyphicon-file &nbsp;README.md
+
+
+
     .col-md-4
+        h2 Building your first SocketStream app
 
-      h3 Installing SocketStream
-
-      p As a Node.js framework, SocketStream is installed via npm.
-
-      pre
-        code
-          span npm install -g socketstream
-
-    .col-md-4
-
-      h3 Building your first SocketStream app
-
-      p Here is a guide on how to create a chat application with SocketStream
+        p Here is a guide on how to create a chat application with SocketStream
 
     .col-md-4
 
