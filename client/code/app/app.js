@@ -31,11 +31,6 @@ var router = new Davis(function () {
         $('content').html(ss.tmpl['site-search'].render({term:req.params.term}));
     });
 
-
-    this.get('/features', function () {
-        $('content').html(ss.tmpl['site-features'].r());
-    });
-
 });
 
 router.start();

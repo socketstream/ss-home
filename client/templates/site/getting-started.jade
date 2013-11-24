@@ -11,15 +11,15 @@
       ul.nav.nav-pills.nav-stacked
         h3 Guide
         li 
-          a Install SocketStream
+          a(href="#install-socketstream") Install SocketStream
         li 
-          a Creating apps
+          a(href="#creating-apps") Creating apps
         li
-          a How app files are organised
+          a(href="#how-app-files-are-organised") How app files are organised
 
     .col-md-7.col-md-offset-1
 
-      .row
+      .row#install-socketstream
         h2 Install SocketStream
 
         p SocketStream is built on top of Node.js, and is compatible with versions 0.8 and above. You can install it via npm.
@@ -29,7 +29,7 @@
 
         p The <code>-g</code> flag is passed to install SocketStream globally. This is so that you can run the <code>socketstream</code> command to generate new apps.
 
-      .row
+      .row#creating-apps
         h2 Creating apps
 
         p Creating an app in SocketStream is as simple as this:
@@ -64,7 +64,7 @@
         pre
           code socketstream new my_other_app -m -c -j
 
-      .row
+      .row#how-app-files-are-organised
         h2 How app files are organised
         p If you take a look at the files and folders inside a new socketstream app, they look like this:
         ul.appStructure
@@ -74,34 +74,3 @@
           li.glyphicon.glyphicon-file &nbsp;app.js
           li.glyphicon.glyphicon-file &nbsp;package.json
           li.glyphicon.glyphicon-file &nbsp;README.md
-
-
-
-    .col-md-4
-        h2 Building your first SocketStream app
-
-        p Here is a guide on how to create a chat application with SocketStream
-
-    .col-md-4
-
-      h3 Developing applications with SocketStream
-
-      p When building an application, you'll need to know how to add specific features to your application, test it, and deploy it. Thankfully there are a pioneering bunch of developers who have explored these issues, and have useful knowledge and tips to share.
-
-    .col-md-4
-
-      h3 SocketStream Plugins
-
-      p A range of plugins exist to assist with working with different client-side frameworks (Backbone, Angular, Ember), Transpilers (CoffeeScript, Less), Integration testing (Cucumber.js), and WebSocket transports (SockJS). You can find them here.
-
-    .col-md-4
-
-      h3 Developing SocketStream
-
-      p If you're interested in helping to add features to SocketStream, or fix existing issues, then have a read here.
-
-    .col-md-4
-
-      h3 Join the community
-
-      p SocketStream has a small but passionate following. Find out how you can join in.
