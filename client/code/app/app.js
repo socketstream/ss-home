@@ -7,24 +7,29 @@ var ss    = window.ss,
 
 var router = new Davis(function () {
 
+    var self = this;
+
     this.configure(function () {
         this.generateRequestOnPageLoad = true;
     });
 
-    this.get('/', function () {
-        $('content').html(ss.tmpl['site-index'].r());
-    });
+    var urlLinks = [
+        {url: '/', template: 'site-index'},
+        {url: '/getting-started', template: 'site-getting-started'},
+        {url: '/tour', template: 'site-tour'},
+        {url: '/news', template: 'site-news'},
+        {url: '/demos', template: 'site-demos'},
+        {url: '/tutorials', template: 'site-tutorials'},
+        {url: '/screencasts', template: 'site-screencasts'},
+        {url: '/plugins', template: 'site-plugins'}
+    ];
 
-    this.get('/getting-started', function () {
-        $('content').html(ss.tmpl['site-getting-started'].r());
-    });
+    var self = this;
 
-    this.get('/tour', function () {
-        $('content').html(ss.tmpl['site-tour'].r());
-    });
-
-    this.get('/news', function () {
-        $('content').html(ss.tmpl['site-news'].r());
+    urlLinks.forEach(function (urlLink) {
+        self.get(urlLink.url, function () {
+            $('content').html(ss.tmpl[urlLink.template].r());
+        });
     });
 
     this.post('/search', function (req) {
