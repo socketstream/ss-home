@@ -74,3 +74,19 @@
           li.glyphicon.glyphicon-file &nbsp;app.js
           li.glyphicon.glyphicon-file &nbsp;package.json
           li.glyphicon.glyphicon-file &nbsp;README.md
+        p SocketStream uses a small initial folder structure, structuring code based on whether it's client-side or server-side code. There is a node_modules folder and package.json file for module dependencies, and an app.js file which boots the SocketStream app. 
+        p Let's look at the client folder in a bit more detail:
+        ul.appStructure
+          li.glyphicon.glyphicon-folder-open &nbsp;client
+          ul.appStructure
+            li.glyphicon.glyphicon-folder-close &nbsp;code
+            li.glyphicon.glyphicon-folder-close &nbsp;css
+            li.glyphicon.glyphicon-folder-close &nbsp;static
+            li.glyphicon.glyphicon-folder-close &nbsp;templates
+            li.glyphicon.glyphicon-folder-close &nbsp;views            
+        p Client-side files are organised into 5 folders:
+        ul
+          li Code stores front-end Javascript files, both the libraries that you want to use (e.g. jQuery, BackBone, D3) and the application code.
+          li CSS stores CSS files
+          li Static stores files that you want publically accessible from the root url of the application, such as images, font files etc.
+          li Templates 

@@ -18,13 +18,11 @@ var router = new Davis(function () {
         {url: '/getting-started', template: 'site-getting-started'},
         {url: '/tour', template: 'site-tour'},
         {url: '/news', template: 'site-news'},
-        {url: '/demos', template: 'site-demos'},
+        {url: '/showcase', template: 'site-showcase'},
         {url: '/tutorials', template: 'site-tutorials'},
         {url: '/screencasts', template: 'site-screencasts'},
         {url: '/plugins', template: 'site-plugins'}
     ];
-
-    var self = this;
 
     urlLinks.forEach(function (urlLink) {
         self.get(urlLink.url, function () {
