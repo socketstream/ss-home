@@ -18,8 +18,17 @@ ss.http.route('/', function(req, res){
     res.serveClient('main');
 });
 
+var links = [
+  {url: '/news',            text: 'News'},
+  {url: '/getting-started', text: 'Getting Started'},
+  {url: '/showcase',        text: 'Showcase'},
+  {url: '/tutorials',       text: 'Tutorials'},
+  {url: '/screencasts',     text: 'Screencasts'},
+  {url: '/plugins',         text: 'Plugins'}
+];
+
 // Code Formatters
-ss.client.formatters.add(require('ss-jade'));
+ss.client.formatters.add(require('ss-jade'), {locals: {links: links}});
 ss.client.formatters.add(require('ss-stylus'));
 
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
