@@ -15,7 +15,7 @@
         li 
           a(href="#creating-apps") Creating apps
         li
-          a(href="#how-app-files-are-organised") How app files are organised
+          a(href="#how-sockstream-apps-are-organised") How Socketstream apps are organised
 
     .col-md-7.col-md-offset-1
 
@@ -47,9 +47,9 @@
             div  ✓ Plain HTML for views <span class="gray">(-j if you prefer Jade)</span>
             div.yellow Next, run the following commands:
             div    cd my_app
-            div    [sudo] npm install
+            div    npm install
             div.yellow To start your app:
-            div    node app.js
+            div    npm start
 
         p If you look at the output, you will notice that the application has generated the basic chat demo (as hosted at <a href='http://demo.socketstream.com'>demo.socketstream.com</a>). You will also notice that there are flags to change what files the app will generate:
         br
@@ -63,30 +63,110 @@
         p To pass these flags, specify them after the app name:
         pre
           code socketstream new my_other_app -m -c -j
+        p After you have created your app, make sure to <code>cd</code> into your socketstream app, and run <code>npm install</code>. Once that is done, you can then run <code>npm start</code>. 
 
-      .row#how-app-files-are-organised
-        h2 How app files are organised
+      .row#how-sockstream-apps-are-organised
+        h2 How SocketStream apps are organised
         p If you take a look at the files and folders inside a new socketstream app, they look like this:
         ul.appStructure
-          li.glyphicon.glyphicon-folder-close &nbsp;client
-          li.glyphicon.glyphicon-folder-close &nbsp;node_modules
-          li.glyphicon.glyphicon-folder-close &nbsp;server
-          li.glyphicon.glyphicon-file &nbsp;app.js
-          li.glyphicon.glyphicon-file &nbsp;package.json
-          li.glyphicon.glyphicon-file &nbsp;README.md
+          li.glyphicon.glyphicon-folder-open &nbsp;
+            b my_app
+          ul.appStructure
+            li.glyphicon.glyphicon-folder-close &nbsp;
+              b client
+            li.glyphicon.glyphicon-folder-close &nbsp;
+              b node_modules
+            li.glyphicon.glyphicon-folder-close &nbsp;
+              b server
+            li.glyphicon.glyphicon-file &nbsp;app.js
+            li.glyphicon.glyphicon-file &nbsp;package.json
+            li.glyphicon.glyphicon-file &nbsp;README.md
         p SocketStream uses a small initial folder structure, structuring code based on whether it's client-side or server-side code. There is a node_modules folder and package.json file for module dependencies, and an app.js file which boots the SocketStream app. 
         p Let's look at the client folder in a bit more detail:
+        h3 Client folder structure
         ul.appStructure
-          li.glyphicon.glyphicon-folder-open &nbsp;client
+          li.glyphicon.glyphicon-folder-open &nbsp;
+            b my_app
           ul.appStructure
-            li.glyphicon.glyphicon-folder-close &nbsp;code
-            li.glyphicon.glyphicon-folder-close &nbsp;css
-            li.glyphicon.glyphicon-folder-close &nbsp;static
-            li.glyphicon.glyphicon-folder-close &nbsp;templates
-            li.glyphicon.glyphicon-folder-close &nbsp;views            
+            li.glyphicon.glyphicon-folder-open &nbsp;
+              b client
+            ul.appStructure
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b code
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b css
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b static
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b templates
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b views
         p Client-side files are organised into 5 folders:
         ul
-          li Code stores front-end Javascript files, both the libraries that you want to use (e.g. jQuery, BackBone, D3) and the application code.
-          li CSS stores CSS files
-          li Static stores files that you want publically accessible from the root url of the application, such as images, font files etc.
-          li Templates 
+          li <b>Code</b> stores front-end Javascript files, both the libraries that you want to use (e.g. jQuery, BackBone, D3) and the application code.
+          li <b>CSS</b> stores CSS files
+          li <b>Static</b> stores files that you want to allow public access to, such as images (e.g. /images/logo.png), font files, and other assets.
+          li <b>Templates</b> stores client-side HTML templates that you want to render on the client
+          li <b>Views stores</b> server-side HTML templates that you want to render on the initial server page load.
+        p Within the code folder, you will notice that there are two folders, app and libs:
+        ul.appStructure
+          li.glyphicon.glyphicon-folder-open &nbsp;
+            b my_app
+          ul.appStructure
+            li.glyphicon.glyphicon-folder-open &nbsp;
+              b client
+            ul.appStructure
+              li.glyphicon.glyphicon-folder-open &nbsp;
+                b code
+              ul.appStructure
+                li.glyphicon.glyphicon-folder-close &nbsp;
+                  b app
+                li.glyphicon.glyphicon-folder-close &nbsp;
+                  b libs
+        p This structure is suggested for helping to keep app-specific javascript files separate from 3rd-party javascript libraries like jQuery, Backbone, etc. You can change this structure if you wish. The same goes for the CSS folder:
+        ul.appStructure
+          li.glyphicon.glyphicon-folder-open &nbsp;
+            b my_app
+          ul.appStructure
+            li.glyphicon.glyphicon-folder-open &nbsp;
+              b client
+            ul.appStructure
+              li.glyphicon.glyphicon-folder-open &nbsp;
+                b css
+              ul.appStructure
+                li.glyphicon.glyphicon-folder-close &nbsp;
+                  b app
+                li.glyphicon.glyphicon-folder-close &nbsp;
+                  b libs
+        p These folder structures are flexible, and the same goes for folders inside of the static folder:
+        ul.appStructure
+          li.glyphicon.glyphicon-folder-open &nbsp;
+            b my_app
+          ul.appStructure
+            li.glyphicon.glyphicon-folder-open &nbsp;
+              b client
+            ul.appStructure
+              li.glyphicon.glyphicon-folder-open &nbsp;
+                b static
+              ul.appStructure
+                li.glyphicon.glyphicon-folder-close &nbsp;
+                  b images
+        p Files stores in this folder will be accessible in the web app from the root path, so an image file at <code>static/images/logo.png</code> will be accessible at <code>http://localhost:3000/images/logo.png</code>.
+        h3 Server folder structure
+        p Compared to the client folder structure, server-side files have a much more streamlined file structure:
+        ul.appStructure
+          li.glyphicon.glyphicon-folder-open &nbsp;
+            b my_app
+          ul.appStructure
+            li.glyphicon.glyphicon-folder-open &nbsp;
+              b server
+            ul.appStructure
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b middleware
+              li.glyphicon.glyphicon-folder-close &nbsp;
+                b rpc
+        p Client-side files are organised into 2 folders:
+        ul
+          li <b>Middleware</b> stores any files containing middleware that you want RPC requests to be able to use, such as for authentication.
+          li <b>Rpc</b> stores files that expose RPC functions that the client can call to do things such as fetch data, authenticate the user, and transmit data.
+

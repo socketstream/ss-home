@@ -13,6 +13,17 @@ var router = new Davis(function () {
         this.generateRequestOnPageLoad = true;
     });
 
+    // These are the showcase apps
+    //
+    var showCaseItems = [
+        {name: 'Dashku',    details: 'Dashku is an open source Dashboard tool that lets you create dashboards and widgets using HTML5, CSS and JavaScript.'},
+        {name: 'VMUX',      details: 'VMUX is an app that lets you have video conversations with people via Twitter, powered by WebRTC.'},
+        {name: 'BitJoy',    details: 'BitJoy is a live feed of Bitcoin prices and news, providing a stock trading screen for live pricing'},
+        {name: 'Hollow',    details: 'This is the official site of the award-winning documentary \'Hollow\'.'},
+        {name: 'TeeLeader', details: 'TeeLeader\'s reservation system for golf courses is powered by SocketStream.'},
+        {name: 'Jarawi',    details: 'Jarawi is aimed at making the creation of content something simple, fun and collaborative.'}
+    ];
+
     var urlLinks = [
         {url: '/', template: 'site-index'}//,
         // {url: '/getting-started', template: 'site-getting-started'},
