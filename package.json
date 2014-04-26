@@ -1,10 +1,10 @@
 {
   "name": "ss-home",
-  "description": "An awesome real time application",
+  "description": "SocketStream's home page",
   "version": "0.0.1",
-  "author": "Me <me@mydomain.com>",
+  "author": "Paul Jensen <paul@anephenix.com>",
   "private": true,
-  "engines": { "node": ">= 0.6.0" },
+  "engines": { "node": ">= 0.10.0" },
   "dependencies": {
     "socketstream": "0.3.x",
     "ss-jade": "0.1.x",

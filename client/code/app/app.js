@@ -14,14 +14,14 @@ var router = new Davis(function () {
     });
 
     var urlLinks = [
-        {url: '/', template: 'site-index'},
-        {url: '/getting-started', template: 'site-getting-started'},
-        {url: '/tour', template: 'site-tour'},
-        {url: '/news', template: 'site-news'},
-        {url: '/showcase', template: 'site-showcase'},
-        {url: '/tutorials', template: 'site-tutorials'},
-        {url: '/screencasts', template: 'site-screencasts'},
-        {url: '/plugins', template: 'site-plugins'}
+        {url: '/', template: 'site-index'}//,
+        // {url: '/getting-started', template: 'site-getting-started'},
+        // {url: '/tour', template: 'site-tour'},
+        // {url: '/news', template: 'site-news'},
+        // {url: '/showcase', template: 'site-showcase'},
+        // {url: '/tutorials', template: 'site-tutorials'},
+        // {url: '/screencasts', template: 'site-screencasts'},
+        // {url: '/plugins', template: 'site-plugins'}
     ];
 
     urlLinks.forEach(function (urlLink) {
@@ -30,9 +30,9 @@ var router = new Davis(function () {
         });
     });
 
-    this.post('/search', function (req) {
-        $('content').html(ss.tmpl['site-search'].render({term:req.params.term}));
-    });
+    // this.post('/search', function (req) {
+    //     $('content').html(ss.tmpl['site-search'].render({term:req.params.term}));
+    // });
 
 });
 
