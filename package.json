@@ -1,17 +1,20 @@
 {
   "name": "ss-home",
+  "subdomain": "socketstream",
   "description": "SocketStream's home page",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "author": "Paul Jensen <paul@anephenix.com>",
   "private": true,
-  "engines": { "node": ">= 0.10.0" },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "dependencies": {
-    "socketstream": "0.3.x",
+    "socketstream": "0.3.11",
     "ss-jade": "0.1.x",
     "ss-stylus": "0.1.x",
     "ss-hogan": "0.1.x"
   },
-  "scripts":{
-    "start":"node app.js"
+  "scripts": {
+    "start": "node app.js"
   }
 }
