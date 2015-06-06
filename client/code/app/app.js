@@ -25,14 +25,15 @@ var router = new Davis(function () {
     ];
 
     var urlLinks = [
-        {url: '/', template: 'site-index'}//,
+        {url: '/', template: 'site-index'},
         // {url: '/getting-started', template: 'site-getting-started'},
         // {url: '/tour', template: 'site-tour'},
-        // {url: '/news', template: 'site-news'},
-        // {url: '/showcase', template: 'site-showcase'},
+        {url: '/news', template: 'site-news'},
+        {url: '/showcase', template: 'site-showcase'},
         // {url: '/tutorials', template: 'site-tutorials'},
         // {url: '/screencasts', template: 'site-screencasts'},
-        // {url: '/plugins', template: 'site-plugins'}
+        {url: '/plugins', template: 'site-plugins'},
+        {url: '/community', template: 'site-community'}
     ];
 
     urlLinks.forEach(function (urlLink) {

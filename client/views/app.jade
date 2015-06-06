@@ -3,8 +3,10 @@ html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(name="theme-color",content="#58d758")
+    link(href='https://fonts.googleapis.com/css?family=Signika:700', rel='stylesheet', type='text/css')
     != SocketStream
-    title SocketStream
+    title Socketstream
   body
     .wrapper
       header
@@ -14,32 +16,23 @@ html(lang="en")
               .navbar-header
                 a(href="/").navbar-brand
                   img(src="/images/header-logo.png", height="15")
-              //-   button(type="button",class="navbar-toggle",data-toggle="collapse",data-target="#bs-example-navbar-collapse-1")
-              //-     span(class="sr-only") Toggle navigation
-              //-     span(class="icon-bar") 
-              //-     span(class="icon-bar")
-              //-     span(class="icon-bar")
-              //- div.collapse.navbar-collapse#bs-example-navbar-collapse-1
-              //-   ul.nav.navbar-nav
-              //-     li
-              //-       a(href="/news") News
-              //-     li
-              //-       a(href="/getting-started") Getting Started
-              //-     li
-              //-       a(href="/showcase") Showcase
-              //-     li
-              //-       a(href="/tutorials") Tutorials
-              //-     li
-              //-       a(href="/screencasts") Screencasts
-              //-     li
-              //-       a(href="/plugins") Plugins
-              //-   form(action="/search", method="POST").navbar-form(role="search").pull-right
-              //-     .form-group
-              //-       input(type="search",name="term",class="form-control",placeholder="Search")
-
+              ul.nav.navbar-nav
+                li
+                  a(href="/news") News
+                li
+                  a(href="http://socketstream.github.io/socketstream/docs/#/tutorials") Documentation
+                li
+                  a(href="/showcase") Showcase
+                li
+                  a(href="/plugins") Plugins
+                li
+                  a(href="/community") Community
 
       content        
       footer
         .container
           .row
-            span SocketStream is licensed under the <a href="http://opensource.org/licenses/MIT">MIT Licence</a>.
+            .col-md-6
+              span Socketstream is licensed under the <a href="http://opensource.org/licenses/MIT">MIT Licence</a>.
+            .col-md-6
+              span.pull-right Sponsored by <a class="sponsor" href="https://anephenix.com">Anephenix</a>

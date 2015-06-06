@@ -33,8 +33,13 @@ body
   background rgba(255,255,255, 0.2)
   border-color rgba(255,255,255, 0.2)
 
+ul.nav.navbar-nav li {
+  background: none;
+}
+
 a.navbar-brand 
   color white !important
+  margin-right 3em
 
 .navbar-default .navbar-nav li a
   color white
@@ -108,9 +113,13 @@ footer
   margin-top 10em
   padding-bottom 0.5em
 
-  .container
+  .container .row
     border-top solid 1px white
     padding-top 0.5em
+    
+    .col-md-6
+      padding-left 0
+      padding-right 0
 
 
 .page-header small
@@ -171,3 +180,9 @@ ul.appStructure li
     color white
   p
     color white
+    
+a.sponsor
+  font-family 'Signika'
+  font-weight 600
+  color white
+  text-transform: uppercase;
