@@ -1,4 +1,4 @@
-.container
+.container#plugins
   .jumbotron
     h1 Plugins
   .row
@@ -7,25 +7,37 @@
   .row
     .col-md-12
       h2 Javascript formatters
-    a(href="https://github.com/socketstream/ss-coffee")
+    a(href="https://libraries.io/npm/ss-coffee")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-coffee
             p Allows you to use CoffeeScript files (.coffee) in your SocketStream project.
-    a(href="https://github.com/cjam/ss-typescript")
+    a(href="https://libraries.io/npm/ss-latest-coffee")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-latest-coffee
+            p CoffeeScript wrapper for SocketStream 0.3
+    a(href="https://libraries.io/npm/ss-iced")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-iced
+            p IcedCoffeeScript wrapper for SocketStream 0.3.x
+    a(href="https://libraries.io/npm/ss-typescript")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-typescript
             p Allows you to use Typescript files (.ts) in your SocketStream project.
-    a(href="https://github.com/madsflensted/ss-LiveScript")
+    a(href="https://libraries.io/npm/ss-liveScript")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-livescript
             p Allows you to use LiveScript files (.ls) in your SocketStream project.
-    a(href="https://github.com/ckknight/ss-gorilla")
+    a(href="https://libraries.io/npm/ss-gorilla")
       .col-md-3
         .thumbnail
           .caption
@@ -34,64 +46,113 @@
   .row
     .col-md-12
       h2 CSS formatters
-    a(href="https://github.com/socketstream/ss-stylus")
+    a(href="https://libraries.io/npm/ss-stylus")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-stylus
             p Allows you to use Stylus files (.styl) in your SocketStream project.
-    a(href="https://github.com/socketstream/ss-less")
+    a(href="https://libraries.io/npm/ss-less")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-less
             p Allows you to use Less files (.less) in your SocketStream project.
+    a(href="https://libraries.io/npm/ss-scss")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-scss
+            p SCSS (CSS) wrapper for SocketStream 0.3
+    a(href="https://libraries.io/npm/ss-sass")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-sass
+            p SASS client styles wrapper for SocketStream 0.3.x
+
   .row
     .col-md-12
       h2 HTML (view) formatters
-    a(href="https://github.com/socketstream/ss-jade")
+    a(href="https://libraries.io/npm/ss-jade")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-jade
             p Allows you to use Jade files (.jade) in your SocketStream project.
-    a(href="https://github.com/socketstream/ss-ejs")
+    a(href="https://libraries.io/npm/ss-ejs")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-ejs
             p EJS (HTML) code wrapper for SocketStream 0.3
   .row
-    .col-md-12
-      h2 HTML (template) formatters
-    a(href="https://github.com/socketstream/ss-hogan")
-      .col-md-3
-        .thumbnail
-          .caption
-            h3.center ss-hogan
-            p Use pre-compiled Hogan (Mustache-compatible) client-side templates in your app to benefit from increased performance and a smaller client-side library download.
-    a(href="https://github.com/socketstream/ss-coffeekup")
+    a(href="https://libraries.io/npm/ss-coffeekup")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-coffeekup
             p Use pre-compiled CoffeeKup client-side templates in your app.
-    a(href="https://github.com/atrefz/ss-toffee")
+    a(href="https://libraries.io/npm/ss-toffee")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-toffee
             p Use pre-compiled Toffee client-side templates in SocketStream.
+    a(href="https://libraries.io/npm/ss-ractive")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-ractive
+            p Ractive template engine wrapper providing server-side compiled templates for SocketStream apps
+    a(href="https://libraries.io/npm/ss-clientjade")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-clientjade
+            p Jade template engine wrapper providing server-side compiled templates for SocketStream apps
+    a(href="https://libraries.io/npm/ss-handlebars-formatter")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-handlebars-formatter
+            p Handlebars wrapper for SocketStream 0.3
+    a(href="https://libraries.io/npm/ss-jsx")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-jsx
+            p JSX wrapper for SocketStream 0.3.x
+    a(href="https://libraries.io/npm/ss-underscore")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-underscore
+            p Underscore template engine wrapper providing server-side compiled templates for SocketStream apps
+    a(href="https://libraries.io/npm/ss-angular-templates")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-angular-templates
+            p Angular.js template engine wrapper provides server-side compiled templates (html/jade) for SocketStream applications    
+    .col-md-12
+      h2 HTML (template) formatters
+    a(href="https://libraries.io/npm/ss-hogan")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-hogan
+            p Use pre-compiled Hogan (Mustache-compatible) client-side templates in your app to benefit from increased performance and a smaller client-side library download.
   .row
     .col-md-12
       h2 Client-Side framework tools
-    a(href="https://github.com/jkonowitch/ss-backbone")
+    a(href="https://libraries.io/npm/ss-backbone")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-backbone
             p SS-Backbone is a drop-in Backbone library for your SocketStream apps meant for realtime syncing of model data.
-    a(href="https://github.com/polidore/ss-angular")
+    a(href="https://libraries.io/npm/ss-angular")
       .col-md-3
         .thumbnail
           .caption
@@ -99,14 +160,23 @@
             p Create an angular service that can be injected into controllers similar to the angular REST resource library.
   .row
     .col-md-12
+      h2 PubSub
+    a(href="https://libraries.io/npm/ss-mubsub")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-mubsub
+            p Easy integration of mubsub into socketstream as pub sub transport
+  .row
+    .col-md-12
       h2 WebSocket transports
-    a(href="https://github.com/socketstream/ss-sockjs")
+    a(href="https://libraries.io/npm/ss-sockjs")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-sockjs
             p SockJS websocket transport layer for SocketStream 0.3
-    a(href="https://github.com/socketstream/ss-engine.io")
+    a(href="https://libraries.io/npm/ss-engine.io")
       .col-md-3
         .thumbnail
           .caption
@@ -114,22 +184,43 @@
             p Engine.io websocket transport layer for SocketStream
   .row
     .col-md-12
+      h2 App build and generation
+    a(href="https://libraries.io/npm/ss-generator")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-generator
+            p SocketStream's app generator as a separate npm module
+    a(href="https://libraries.io/npm/ss-build")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-build
+            p Building Socketstream assets without running the server
+  .row
+    .col-md-12
       h2 Testing &amp; Debugging
-    a(href="https://github.com/socketstream/ss-cucumber")
+    a(href="https://libraries.io/npm/ss-cucumber")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-cucumber
             p Cucumber.js integration for SocketStream
-    a(href="https://github.com/socketstream/ss-console")
+    a(href="https://libraries.io/npm/ss-console")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-console
             p Adds a Console (REPL) interface to your SocketStream app.
-    a(href="https://github.com/socketstream/ss-echo-responder")
+    a(href="https://libraries.io/npm/ss-echo-responder")
       .col-md-3
         .thumbnail
           .caption
             h3.center ss-echo-responder
             p This is an example of an ultra-simple Request Responder for SocketStream.
+    a(href="https://libraries.io/npm/ss-heartbeat-responder")
+      .col-md-3
+        .thumbnail
+          .caption
+            h3.center ss-heartbeat-responder
+            p Heartbeat Request Responder for SocketStream
